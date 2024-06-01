@@ -1,0 +1,11 @@
+.carousel-item {
+    transition: opacity 8s ease-in-out smooth; /* Smooth transition effect */
+  }
+
+  .carousel-item.active {
+    opacity: 1; /* Show active slide */
+  }
+
+  .carousel-item:not(.active) {
+    opacity: 0; /* Hide inactive slides */
+  }

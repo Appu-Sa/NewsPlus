@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Api from "./components/Api";
+import Nav from "./components/Nav";
 
 function App() {
+  const [cat, setCat] = useState("general");
+  const [country, setCountry] = useState("us");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav setCat={setCat} setCountry={setCountry}/>
+      <Api cat={cat} country={country}/>
+    </>
   );
 }
 
